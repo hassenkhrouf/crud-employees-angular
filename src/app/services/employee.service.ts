@@ -8,15 +8,15 @@ import { Observable } from 'rxjs/internal/Observable';
 export class EmployeeService {
   constructor(private _http: HttpClient) {}
   addEmployee(data: any): Observable<any> {
-    return this._http.post('http://localhost:3000/employees', data);
+    return this._http.post('https://employees-api-ng96.onrender.com/employees', data);
   }
   getEmployee(): Observable<any> {
-    return this._http.get('http://localhost:3000/employees');
+    return this._http.get('https://employees-api-ng96.onrender.com/employees');
   }
   updateEmployee(id: number, data: any): Observable<any> {
-    return this._http.put(`http://localhost:3000/employees/${id}`, data);
+    return this._http.put(`https://employees-api-ng96.onrender.com/employees/${id}`, data);
   }
   deleteEmployee(id: number): Observable<any> {
-    return this._http.delete(`http://localhost:3000/employees/${id}`);
+    return this._http.delete(`https://employees-api-ng96.onrender.com/employees/${id}`);
   }
 }
