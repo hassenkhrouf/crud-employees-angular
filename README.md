@@ -1,27 +1,175 @@
-# FirstApp
+# 👨‍💼 Angular Employee Management System
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
+A full-stack Employee Management CRUD application built with **Angular** and deployed to production.
 
-## Development server
+This project demonstrates modern frontend architecture, REST API integration, environment configuration, and cloud deployment.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## 🌐 Live Demo
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- 🔵 **Frontend (Vercel):** https://crud-employees-angular.vercel.app/
+- 🟢 **Backend API (Render):** https://employees-api-ng96.onrender.com/employees
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## ✨ Features
 
-## Running unit tests
+- ✅ Create new employees
+- ✅ View paginated & sortable employee list
+- ✅ Update employee details
+- ✅ Delete employees
+- ✅ Responsive UI using Angular Material
+- ✅ RESTful API integration
+- ✅ Environment-based configuration (Dev / Production)
+- ✅ Cloud deployment (Vercel + Render)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+---
 
-## Running end-to-end tests
+## 🛠 Tech Stack
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Frontend
 
-## Further help
+- Angular
+- Angular CLI
+- Angular Material
+- TypeScript
+- RxJS
+- HTTPClient
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Backend
+
+- JSON Server (Mock REST API)
+- Hosted on Render
+
+### Deployment
+
+- Vercel (Frontend Hosting)
+- Render (Backend Hosting)
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+ ├── app/
+ ├── environments/
+ │     ├── environment.ts
+ │     └── environment.prod.ts
+ └── assets/
+```
+
+Environment configuration automatically switches between:
+
+- Local API → `http://localhost:3000`
+- Production API → Render hosted backend
+
+---
+
+## ⚙️ Local Development Setup
+
+### 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/hassenkhrouf/crud-employees-angular.git
+cd crud-employees-angular
+```
+
+### 2️⃣ Install Dependencies
+
+```bash
+npm install
+```
+
+### 3️⃣ Start Backend (JSON Server)
+
+```bash
+npx json-server --watch db.json --port 3000
+```
+
+Backend runs at:
+
+```
+http://localhost:3000
+```
+
+### 4️⃣ Start Angular App
+
+```bash
+ng serve
+```
+
+Open:
+
+```
+http://localhost:4200
+```
+
+---
+
+## 🏗 Production Build
+
+To build the production version:
+
+```bash
+ng build --configuration production
+```
+
+Angular automatically uses `environment.prod.ts` for the production API URL.
+
+---
+
+## 📡 API Structure
+
+Endpoint:
+
+```
+/employees
+```
+
+Sample Employee Object:
+
+```json
+{
+  "id": "string",
+  "firstName": "string",
+  "lastName": "string",
+  "email": "string",
+  "dob": "date",
+  "gender": "string",
+  "education": "string",
+  "company": "string",
+  "experience": "number",
+  "package": "number"
+}
+```
+
+---
+
+## 📚 What This Project Demonstrates
+
+- Component-based architecture
+- Angular Material UI integration
+- REST API consumption
+- CRUD operations
+- Environment configuration
+- Cloud deployment workflow
+- Git version control
+
+---
+
+## 🚀 Future Improvements
+
+- Authentication (Login/Register)
+- Backend pagination
+- Search & filtering
+- Replace JSON Server with Express or Spring Boot
+- Docker support
+
+---
+
+## 👤 Author
+
+**Hassen Khrouf**  
+Full Stack Developer (Angular + Spring Boot)
