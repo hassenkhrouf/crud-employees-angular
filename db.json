@@ -1,0 +1,44 @@
+{
+  "$schema": "./node_modules/json-server/schema.json",
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "employees": [
+    {
+      "firstName": "Hassen",
+      "lastName": "Khrouf",
+      "email": "hassen@gmail.com",
+      "dob": "2026-02-26T23:00:00.000Z",
+      "gender": "male",
+      "education": "Diploma",
+      "company": "CIFOP",
+      "experience": 2,
+      "package": 200,
+      "id": "9c10"
+    }
+  ]
+}
