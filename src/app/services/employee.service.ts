@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -8,15 +9,15 @@ import { Observable } from 'rxjs/internal/Observable';
 export class EmployeeService {
   constructor(private _http: HttpClient) {}
   addEmployee(data: any): Observable<any> {
-    return this._http.post('https://employees-api-ng96.onrender.com/employees', data);
+    return this._http.post(`${environment.apiUrl}/employees`, data);
   }
   getEmployee(): Observable<any> {
-    return this._http.get('https://employees-api-ng96.onrender.com/employees');
+    return this._http.get(`${environment.apiUrl}/employees`);
   }
   updateEmployee(id: number, data: any): Observable<any> {
-    return this._http.put(`https://employees-api-ng96.onrender.com/employees/${id}`, data);
+    return this._http.put(`${environment.apiUrl}/employees/${id}`, data);
   }
   deleteEmployee(id: number): Observable<any> {
-    return this._http.delete(`https://employees-api-ng96.onrender.com/employees/${id}`);
+    return this._http.delete(`${environment.apiUrl}/employees/${id}`);
   }
 }
